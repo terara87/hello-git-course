@@ -1,0 +1,16 @@
+title: Hello Git
+description: 初めてのコース
+template:
+  repo: hello-git-template
+  name: hello-git
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
